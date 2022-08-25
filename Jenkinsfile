@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Checkout') {
           steps {
-            bat "git clone https://github.com/RafoMeliqyan/JenkinsPipeline"
+            git "https://github.com/RafoMeliqyan/JenkinsPipeline"
           }
         }
 
         stage('Build') {
           steps {
-            bat "mvn compile"
+            bat "mvn clean install"
           }
         }
 
